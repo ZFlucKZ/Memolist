@@ -11,34 +11,36 @@
 
   <h1>Contact List</h1>
 
-  <div>
+  <div class="container">
     <ul>
+      <li>
+        <h2>Name</h2>
+        <h2>Phone</h2>
+        <p></p>
+      </li>
       <% for(let i of locals.contact_list){ %>
         <li>
-          <div class="details">
-            <p>
-              <%= i.name %>
-            </p>
-            <p>
-              <%= i.phone %>
-            </p>
-          </div>
+          <p>
+            <%= i.name %>
+          </p>
+          <p>
+            <%= i.phone %>
+          </p>
           <div class="delete-btn">
             <a href="/delete-contact/?id=<%= i._id %>">
               <button>Delete</button>
             </a>
           </div>
-
         </li>
         <% } %>
     </ul>
-  </div>
 
-  <form action="/create-contact" method="post">
-    <input type="text" name="name" placeholder="Enter Name" required>
-    <input type="number" name="phone" placeholder="Enter Phone" required>
-    <button type="submit">Add Contact</button>
-  </form>
+    <form action="/create-contact" method="post">
+      <input type="text" name="name" placeholder="Enter Name" required>
+      <input type="number" name="phone" placeholder="Enter Phone" required>
+      <button type="submit">Add Contact</button>
+    </form>
+  </div>
 
   <script type="text/javascript" src="/js/home.js"></script>
 </body>

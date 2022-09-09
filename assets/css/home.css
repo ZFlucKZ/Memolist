@@ -1,0 +1,152 @@
+/* ----------------- FONTS ----------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----------------- VARIABLES CSS ----------------- */
+:root {
+  /*========== Font and typography ==========*/
+  /* 1rem = 16px */
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 1.75rem;
+  --h1-font-size: 2.4rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.625rem;
+  --biggest-icon-size: 2rem;
+  --normal-icon-size: 1.5rem;
+  --small-icon-size: 1rem;
+  --biggest-logo-size: 3rem;
+  --normal-logo-size: 2.5rem;
+  --small-logo-size: 2rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /*========== Colors ==========*/
+  /*
+        Blue: #9BBBFC 
+        Teal: #D9EFE7
+        Blue-Dark: #4741A6 
+        Yellow: #F9CE69
+  */
+  --text-color: black;
+  --body-color: #D9EFE7;
+  --button-color: #9BBBFC;
+  --button-color-dark: #4741A6;
+
+  /*========== Border ==========*/
+  --border-radius-small: 5px;
+  --border-radius-medium: 10px;
+  --border-radius-large: 15px;
+}
+
+/* ----------------- BASES ----------------- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: 0.4s;
+  /* for light mode animation */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-semibold);
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  color: var(--text-title-color);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h2,
+p {
+  text-align: justify;
+  width: 3.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: var(--button-color);
+  border-radius: var(--border-radius-small);
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* ----------------- List & Form Container ----------------- */
+.container {
+  width: 50%;
+  margin: auto;
+  padding: 2rem;
+  border: 2px #F9CE69 solid;
+  border-radius: var(--border-radius-medium);
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1.2rem;
+}
+
+/* ----------------- List of Contact ----------------- */
+ul {
+  width: 80%;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.delete-btn button {
+  background-color: red;
+}
